@@ -1,0 +1,146 @@
+.page-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+.welcome {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: #214F1E;
+    padding-top: 15vh;
+    padding-left: 2vw;
+}
+.login{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 2.1vw;
+}
+.login-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #555555;
+    margin-top: -1vh;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+    margin-top: 7vh;
+}
+
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #555555;
+    padding-left: 2vw;
+}
+
+.input-row {
+    display: flex;
+    align-items: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
+
+}
+
+.input-row input {
+    flex: 1;
+    background-color: #F1F3F6;
+    border: none;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    height: 50px;
+}
+
+.input-row input::placeholder {
+    color: #999;
+}
+
+.icon-btn {
+    background-color: #214F1E;
+    border: none;
+    border-radius: 10px;
+    width: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon-btn:hover {
+    background-color: #1a3f17;
+}
+.password-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #555555;
+    padding-left: 2vw;
+}
+.forgot-password{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-left: 2.1vw;
+}
+.forgot-password-text{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #555555;
+    padding-right: 2vw;
+    padding-top: 0.5vh;
+}
+.brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15vh;
+}
+
+.brand-logo {
+    width: 110px;
+    height: 110px;
+}
+
+.brand-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #214F1E;
+    margin-left: -1vw;
+}
+.background2Image {
+    max-width: 100%;
+    max-height: 100vh;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #F1F3F6;
+    font-family: 'Poppins', sans-serif;
+}
+#background1 {
+    background-color: #FFFFFF;
+    width: 27vw;
+    height: 100vh;
+    padding-top: 15vh;
+    align-items: center;
+    justify-content: center;
+}
+#background2  {
+    background-color: #F1F3F6;
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
