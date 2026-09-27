@@ -8,7 +8,6 @@
     font-weight: 700;
     font-size: 44px;
     color: #214F1E;
-    padding-top: 15vh;
     padding-left: 2vw;
 }
 .login{
@@ -98,6 +97,59 @@
     padding-right: 2vw;
     padding-top: 0.5vh;
 }
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin-top: 4vh; /* adjust spacing above the buttons as needed */
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-primary {
+    background-color: #214F1E;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+.btn-primary:hover {
+    background-color: #1a3f17;
+}
+.btn-secondary {
+    background-color: white;
+    color: #214F1E;
+    border: 2px solid #214F1E;
+}
+.btn-secondary:hover {
+    background-color: #F1F3F6;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.divider .line {
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+.divider-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #999;
+}
 .brand {
     display: flex;
     justify-content: center;
@@ -106,14 +158,14 @@
 }
 
 .brand-logo {
-    width: 110px;
-    height: 110px;
+    width: 220px;
+    height: 220px;
 }
 
 .brand-text {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 34px;
+    font-size: 68px;
     color: #214F1E;
     margin-left: -1vw;
 }
@@ -139,8 +191,5 @@ html, body {
     background-color: #F1F3F6;
     flex: 1;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
