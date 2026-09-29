@@ -1,7 +1,22 @@
 .page-wrapper {
+    position: relative;
     display: flex;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+}
+.page-wrapper.signup-mode #background1 {
+    transform: translateX(36.5vw);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+}
+.page-wrapper.signup-mode .login-form {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.page-wrapper.signup-mode .signup-form {
+    opacity: 1;
+    pointer-events: auto;
 }
 .welcome {
     font-family: 'Poppins', sans-serif;
@@ -22,6 +37,13 @@
     font-size: 18px;
     color: #555555;
     margin-top: -1vh;
+}
+.form {
+    position: absolute;
+    inset: 0;
+    padding-top: 15vh;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
 }
 .form-group {
     display: flex;
@@ -62,7 +84,11 @@
 .input-row input::placeholder {
     color: #999;
 }
-
+.signup-form {
+    padding-top: 8vh;
+    opacity: 0;
+    pointer-events: none;
+}
 .icon-btn {
     background-color: #214F1E;
     border: none;
@@ -180,16 +206,67 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 #background1 {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
     background-color: #FFFFFF;
     width: 27vw;
     height: 100vh;
-    padding-top: 15vh;
-    align-items: center;
-    justify-content: center;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
 }
 #background2  {
     background-color: #F1F3F6;
     flex: 1;
     height: 100vh;
 }
+#background2 .brand {
+    transition: opacity 0.4s ease;
+}
 
+.page-wrapper.signup-mode #background2 .brand {
+    opacity: 0;
+}
+
+/* signup view styling */
+.signup-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.signup-brand img {
+    width: 64px;
+    height: 64px;
+}
+
+.signup-brand span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #214F1E;
+}
+
+.signup-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: #214F1E;
+    text-align: center;
+    margin: 4vh 0;
+}
+
+.signup-form .form-group {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.back-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #214F1E;
+}

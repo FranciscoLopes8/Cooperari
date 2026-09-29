@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" type="image/png" href="/images/cooperariLogo.png">
+</head>
+<body>
+<div class="page-wrapper" id="page">
+
+    <div id="background1">
+
+        <!-- login -->
+        <form action="/Login" method="post" class="form login-form">
+            <span class="welcome">Welcome Back!</span>
+            <div class="login">
+                <span class="login-text">Login into your account</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-row">
+                    <input type="email" id="email" name="email" placeholder="alex@email.com" required>
+                    <button type="button" class="icon-btn" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2">
+                            <path d="M4 4h16v16H4z" stroke-linejoin="round"/>
+                            <path d="M4 4l8 8 8-8" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <span class="password-text">Password</span>
+            <div class="input-row">
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <button type="button" class="icon-btn" aria-label="Toggle password" onclick="togglePassword('password')">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2">
+                        <rect x="5" y="11" width="14" height="9" rx="2"/>
+                        <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="forgot-password">
+                <span class="forgot-password-text">Forgot Password?</span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Login Now</button>
+
+                <div class="divider">
+                    <span class="line"></span>
+                    <span class="divider-text">OR</span>
+                    <span class="line"></span>
+                </div>
+
+                <button type="button" id="to-signup" class="btn btn-secondary">Create an Account</button>
+            </div>
+        </form>
+
+        <!--create account-->
+        <form action="/Signup" method="post" class="form signup-form">
+            <div class="signup-brand">
+                <img src="/images/cooperariLogo.png" alt="Logo">
+                <span>Cooperari</span>
+            </div>
+
+            <h1 class="signup-title">Create an Account</h1>
+
+            <div class="form-group">
+                <label for="signup-name">Name</label>
+                <div class="input-row">
+                    <input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
+                    <button type="button" class="icon-btn" aria-label="Name">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M4 21v-1a8 8 0 0116 0v1"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <div class="input-row">
+                    <input type="email" id="signup-email" name="email" placeholder="alex@email.com" required>
+                    <button type="button" class="icon-btn" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2">
+                            <path d="M4 4h16v16H4z" stroke-linejoin="round"/>
+                            <path d="M4 4l8 8 8-8" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <div class="input-row">
+                    <input type="password" id="signup-password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="icon-btn" aria-label="Toggle password" onclick="togglePassword('signup-password')">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2">
+                            <rect x="5" y="11" width="14" height="9" rx="2"/>
+                            <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">Create Account</button>
+                <button type="button" id="to-login" class="back-link">Already have an account? Log in</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="background2">
+        <div class="brand">
+            <img src="/images/cooperariLogo.png" class="brand-logo">
+            <span class="brand-text">Cooperari</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const page = document.getElementById('page');
+
+    document.getElementById('to-signup').addEventListener('click', () => {
+        page.classList.add('signup-mode');
+    });
+
+    document.getElementById('to-login').addEventListener('click', () => {
+        page.classList.remove('signup-mode');
+    });
+
+    function togglePassword(id) {
+        const input = document.getElementById(id);
+        input.type = input.type === 'password' ? 'text' : 'password';
+    }
+</script>
+</body>
+</html>
